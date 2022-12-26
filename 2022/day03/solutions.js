@@ -38,7 +38,7 @@ console.log(`Sum of the item priorities is: ${totalPriority}`);
 
 const elfGroups = [];
 
-for (let i = 0; i < data.length; i = i + 3) {
+for (let i = 0; i < data.length; i += 3) {
 	const group = data.slice(i, i + 3);
 	elfGroups.push(group);
 }

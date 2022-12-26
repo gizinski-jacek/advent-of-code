@@ -14,19 +14,19 @@ data.forEach((line) => {
 	const pair = line.split(' ');
 	switch (pair[1]) {
 		case 'X':
-			if (pair[0] === 'A') score = score + 3;
-			if (pair[0] === 'C') score = score + 6;
-			score = score + 1;
+			if (pair[0] === 'A') score += 3;
+			if (pair[0] === 'C') score += 6;
+			score += 1;
 			break;
 		case 'Y':
-			if (pair[0] === 'A') score = score + 6;
-			if (pair[0] === 'B') score = score + 3;
-			score = score + 2;
+			if (pair[0] === 'A') score += 6;
+			if (pair[0] === 'B') score += 3;
+			score += 2;
 			break;
 		case 'Z':
-			if (pair[0] === 'B') score = score + 6;
-			if (pair[0] === 'C') score = score + 3;
-			score = score + 3;
+			if (pair[0] === 'B') score += 6;
+			if (pair[0] === 'C') score += 3;
+			score += 3;
 			break;
 		default:
 			break;
@@ -51,21 +51,21 @@ data.forEach((line) => {
 	const pair = line.split(' ');
 	switch (pair[1]) {
 		case 'X':
-			if (pair[0] === 'A') score = score + 3;
-			if (pair[0] === 'B') score = score + 1;
-			if (pair[0] === 'C') score = score + 2;
+			if (pair[0] === 'A') score += 3;
+			if (pair[0] === 'B') score += 1;
+			if (pair[0] === 'C') score += 2;
 			break;
 		case 'Y':
-			if (pair[0] === 'A') score = score + 1;
-			if (pair[0] === 'B') score = score + 2;
-			if (pair[0] === 'C') score = score + 3;
-			score = score + 3;
+			if (pair[0] === 'A') score += 1;
+			if (pair[0] === 'B') score += 2;
+			if (pair[0] === 'C') score += 3;
+			score += 3;
 			break;
 		case 'Z':
-			if (pair[0] === 'A') score = score + 2;
-			if (pair[0] === 'B') score = score + 3;
-			if (pair[0] === 'C') score = score + 1;
-			score = score + 6;
+			if (pair[0] === 'A') score += 2;
+			if (pair[0] === 'B') score += 3;
+			if (pair[0] === 'C') score += 1;
+			score += 6;
 			break;
 		default:
 			break;
