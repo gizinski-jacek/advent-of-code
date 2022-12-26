@@ -1,15 +1,13 @@
 // --- Day 1: Calorie Counting ---
 // https://adventofcode.com/2022/day/1
 
-const data = require('fs').readFileSync('./input.txt', 'utf-8');
+const data = require('fs').readFileSync('./input.txt', 'utf-8').split('\n\n');
 
 // --- Part One ---
 
-const splitData = data.split('\n\n');
-
 const allElves = [];
 
-splitData.forEach((elf) => {
+data.forEach((elf) => {
 	const carrying = elf
 		.split('\n')
 		.reduce((prev, curr) => parseInt(prev) + parseInt(curr), 0);

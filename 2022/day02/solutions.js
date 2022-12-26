@@ -1,18 +1,16 @@
 // --- Day 2: Rock Paper Scissors ---
 // https://adventofcode.com/2022/day/2
 
-const data = require('fs').readFileSync('./input.txt', 'utf-8');
+const data = require('fs').readFileSync('./input.txt', 'utf-8').split('\n');
 
 // --- Part One ---
 // A, X - Rock
 // B, Y - Paper
 // C, Z - Scissors
 
-const splitData = data.split('\n');
-
 let score = 0;
 
-splitData.forEach((line) => {
+data.forEach((line) => {
 	const pair = line.split(' ');
 	switch (pair[1]) {
 		case 'X':
@@ -49,7 +47,7 @@ console.log(`Total score is: ${score}`);
 
 score = 0;
 
-splitData.forEach((line) => {
+data.forEach((line) => {
 	const pair = line.split(' ');
 	switch (pair[1]) {
 		case 'X':

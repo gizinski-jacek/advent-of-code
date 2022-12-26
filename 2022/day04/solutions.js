@@ -1,13 +1,11 @@
 // --- Day 4: Camp Cleanup ---
 // https://adventofcode.com/2022/day/4
 
-const data = require('fs').readFileSync('./input.txt', 'utf-8');
+const data = require('fs').readFileSync('./input.txt', 'utf-8').split('\n');
 
 // --- Part One ---
 
-const splitData = data.split('\n');
-
-const pairs = splitData.map((data) => data.split(','));
+const pairs = data.map((data) => data.split(','));
 
 let fullOverlapCount = 0;
 

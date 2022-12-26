@@ -1,15 +1,13 @@
 // --- Day 3: Rucksack Reorganization ---
 // https://adventofcode.com/2022/day/3
 
-const data = require('fs').readFileSync('./input.txt', 'utf-8');
+const data = require('fs').readFileSync('./input.txt', 'utf-8').split('\n');
 
 // --- Part One ---
 
-const splitData = data.split('\n');
-
 const commonItems = [];
 
-splitData.forEach((rucksack) => {
+data.forEach((rucksack) => {
 	const firstCompartment = rucksack.slice(0, rucksack.length / 2).split('');
 	const secondCompartment = rucksack.slice(rucksack.length / 2).split('');
 	const firstCompartmentDuplicates = [];
@@ -40,8 +38,8 @@ console.log(`Sum of the item priorities is: ${totalPriority}`);
 
 const elfGroups = [];
 
-for (let i = 0; i < splitData.length; i = i + 3) {
-	const group = splitData.slice(i, i + 3);
+for (let i = 0; i < data.length; i = i + 3) {
+	const group = data.slice(i, i + 3);
 	elfGroups.push(group);
 }
 
